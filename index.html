@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #333; color: #fff; padding: 20px; text-align: center; }
+        nav { background: #f4f4f4; padding: 10px; text-align: center; }
+        nav a { margin: 0 10px; text-decoration: none; color: #333; }
+        section { padding: 20px; max-width: 900px; margin: auto; }
+        .services, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .gallery img { width: 100%; border-radius: 8px; }
+        footer { background: #333; color: #fff; text-align: center; padding: 15px; margin-top: 30px; }
+        .map { width: 100%; height: 300px; border: 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Business Name</h1>
+        <p>Short tagline or slogan</p>
+    </header>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="services">
+        <h2>What We Offer</h2>
+        <div class="services">
+            <div>
+                <h3>Service 1</h3>
+                <p>Description of service 1.</p>
+            </div>
+            <div>
+                <h3>Service 2</h3>
+                <p>Description of service 2.</p>
+            </div>
+            <div>
+                <h3>Service 3</h3>
+                <p>Description of service 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Photo 1" />
+            <img src="image2.jpg" alt="Photo 2" />
+            <img src="image3.jpg" alt="Photo 3" />
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Phone:</strong> 000-000-0000</p>
+        <p><strong>Email:</strong> email@example.com</p>
+        <p><strong>Address:</strong> Your address here</p>
+
+        <h3>Find Us</h3>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0" allowfullscreen="" loading="lazy"></iframe>
+
+        <p>
+            <a href="https://facebook.com" target="_blank">Our Facebook Page</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Business Name</p>
+    </footer>
+</body>
+</html>
