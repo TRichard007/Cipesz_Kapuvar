@@ -6,7 +6,7 @@
     <title>Cipész és kulcsmásoló Kapuvár</title>
 
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f0f0; }
         
         /* HEADER */
         header {
@@ -18,20 +18,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 70px; /* push icons further out */
             margin-bottom: 10px;
         }
         .icon-box {
             background: white;
             color: black;
-            border: 4px solid black; /* thicker border */
-            padding: 10px;
+            border: 4px solid black;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 60px;
-            height: 60px;
+            width: 50px;  /* slightly smaller than middle */
+            height: 50px;
+            padding: 8px;
         }
         .icon-box img {
             max-width: 40px;
@@ -40,20 +40,51 @@
         .title-box {
             background: white;
             color: black;
-            border: 4px solid black; /* thicker border */
+            border: 4px solid black;
             display: inline-block;
-            padding: 15px 25px;
+            padding: 20px 30px;
             border-radius: 8px;
         }
 
         /* NAVIGATION */
-        nav { background: #f4f4f4; padding: 10px; text-align: center; }
-        nav a { margin: 0 10px; text-decoration: none; color: #333; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
+        nav {
+            background: #f4f4f4;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            border: 2px solid black;
+            padding: 6px 15px;
+            border-radius: 5px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav a:hover {
+            background: black;
+            color: white;
+        }
 
         /* SECTIONS */
-        section { padding: 20px; max-width: 900px; margin: auto; }
-        .services, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        .content-box {
+            background: white;
+            border: 2px solid black;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+        }
+        .services, .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
         .gallery img { width: 100%; border-radius: 8px; }
 
         /* MAP */
@@ -97,81 +128,94 @@
 
     <!-- INTRO -->
     <section id="intro">
-        <h2>Bemutatkozás</h2>
-        <p>Török Zoltán cipész és kulcsmásoló vagyok. Már 35 éve vagyok a szakmába ... 
-        A vállalkozásom a Veszkényi utca 20 szám alatt, a családi házam mellett külön bejárattal található meg.</p>
+        <div class="content-box">
+            <h2>Bemutatkozás</h2>
+            <p>Török Zoltán cipész és kulcsmásoló vagyok. Már 35 éve vagyok a szakmába ... 
+            A vállalkozásom a Veszkényi utca 20 szám alatt, a családi házam mellett külön bejárattal található meg.</p>
+        </div>
     </section>
 
     <!-- SERVICES -->
     <section id="services">
-        <h2>Szolgáltatások</h2>
-        <div class="services">
-            <div>
-                <h3>Teljeskörű cipőjavítás</h3>
-                <p>Talpalás</p>
-                <p>Talpragasztás</p>
-                <p>Bélésjavítás</p>
-                <p>Húzózár csere</p>
-                <p>Szárszűkítés</p>
-                <p>Egyéb</p>
-            </div>
-            <div>
-                <h3>Kulcsmásolás</h3>
-                <p>Hagyományos ajtókulcsok, postaláda-, lakat- és kapukulcsok másolása.</p>
-            </div>
-            <div>
-                <h3>Egyéb ruhajavítások</h3>
-                <p>Táska javítás</p>
-                <p>Övjavítás</p>
-                <p>Bőrkabátjavítás</p>
-                <p>Farmerjavítás</p>
-            </div>
-            <div>
-                <h3>Egyéb szolgáltatások</h3>
-                <p>Speciális talpbetét készítés</p>
-                <p>Kések–ollók élezése</p>
-                <p>Turkáló</p>
+        <div class="content-box">
+            <h2>Szolgáltatások</h2>
+            <div class="services">
+                <div>
+                    <h3>Teljeskörű cipőjavítás</h3>
+                    <p>Talpalás</p>
+                    <p>Talpragasztás</p>
+                    <p>Bélésjavítás</p>
+                    <p>Húzózár csere</p>
+                    <p>Szárszűkítés</p>
+                    <p>Egyéb</p>
+                </div>
+                <div>
+                    <h3>Kulcsmásolás</h3>
+                    <p>Hagyományos ajtókulcsok, postaláda-, lakat- és kapukulcsok másolása.</p>
+                </div>
+                <div>
+                    <h3>Egyéb ruhajavítások</h3>
+                    <p>Táska javítás</p>
+                    <p>Övjavítás</p>
+                    <p>Bőrkabátjavítás</p>
+                    <p>Farmerjavítás</p>
+                </div>
+                <div>
+                    <h3>Egyéb szolgáltatások</h3>
+                    <p>Speciális talpbetét készítés</p>
+                    <p>Kések–ollók élezése</p>
+                    <p>Turkáló</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- OPENING HOURS -->
     <section id="open">
-        <h2>Nyitvatartás</h2>
-        <p>Hétfő: 8:00 – 12:00, 13:00 – 17:00</p>
-        <p>Kedd: 8:00 – 12:00, 13:00 – 17:00</p>
-        <p>Szerda: 8:00 – 12:00, 13:00 – 17:00</p>
-        <p>Csütörtök: 8:00 – 12:00, 13:00 – 17:00</p>
-        <p>Péntek: 8:00 – 12:00, 13:00 – 17:00</p>
-        <p>Szombat: 8:00 – 12:00</p>
-        <p>Vasárnap: Zárva</p>
+        <div class="content-box">
+            <h2>Nyitvatartás</h2>
+            <p>Hétfő: 8:00 – 12:00, 13:00 – 17:00</p>
+            <p>Kedd: 8:00 – 12:00, 13:00 – 17:00</p>
+            <p>Szerda: 8:00 – 12:00, 13:00 – 17:00</p>
+            <p>Csütörtök: 8:00 – 12:00, 13:00 – 17:00</p>
+            <p>Péntek: 8:00 – 12:00, 13:00 – 17:00</p>
+            <p>Szombat: 8:00 – 12:00</p>
+            <p>Vasárnap: Zárva</p>
+        </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
-        <h2>Kapcsolat</h2>
-        <p>📞 <strong>Telefonszám:</strong> <a href="tel:+36707739913">+36/70/773/9913</a></p>
-        <p>✉️ <strong>E-mail:</strong> <a href="mailto:zoltant7691@gmail.com">zoltant7691@gmail.com</a></p>
-        <p>📍 <strong>Cím:</strong> Kapuvár, Veszkényi utca 20</p>
-        <p><img src="facbookicon.png" alt="Facebook"> <strong>Facebook:</strong> <a href="https://www.facebook.com/torok.zoltan.969" target="_blank">Facebook – Török Zoltán</a></p>
+        <div class="content-box">
+            <h2>Kapcsolat</h2>
+            <p><img src="phoneicon.png" alt="Telefon"> <strong>Telefonszám:</strong> <a href="tel:+36707739913">+36/70/773/9913</a></p>
+            <p><img src="levelicon.png" alt="Levél"> <strong>E-mail:</strong> <a href="mailto:zoltant7691@gmail.com">zoltant7691@gmail.com</a></p>
+            <p><img src="helyicon.png" alt="Hely"> <strong>Cím:</strong> Kapuvár, Veszkényi utca 20</p>
+            <p><img src="facbookicon.png" alt="Facebook"> <strong>Facebook:</strong> 
+            <a href="https://www.facebook.com/torok.zoltan.969" target="_blank">Facebook – Török Zoltán</a></p>
+        </div>
     </section>
 
     <!-- MAP -->
     <section id="map">
-        <h2>Térkép</h2>
-        <iframe 
-            class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d168.16412137282055!2d17.033176603698273!3d47.59451730560008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c07d5febf9321%3A0xd41e9301d90b8d13!2zQ2lww6lzeiDDqXMga3VsY3Ntw6Fzb2zDsw!5e0!3m2!1shu!2shu!4v1765368181531!5m2!1shu!2shu"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <div class="content-box">
+            <h2>Térkép</h2>
+            <iframe 
+                class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d168.16412137282055!2d17.033176603698273!3d47.59451730560008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c07d5febf9321%3A0xd41e9301d90b8d13!2zQ2lww6lzeiDDqXMga3VsY3Ntw6Fzb2zDsw!5e0!3m2!1shu!2shu!4v1765368181531!5m2!1shu!2shu"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
     </section>
 
     <!-- TURKÁLÓ -->
     <section id="turkalo">
-        <h2>Turkáló</h2>
-        <p>Az üzlet előterébe turkálót alakítottam ki, ahol cipőket, táskákat, öveket, pólókat, pulcsikat, farmerokat, szabadidő ruhákat, kabátokat valamint sok más dolgot találhat az ember.</p>
+        <div class="content-box">
+            <h2>Turkáló</h2>
+            <p>Az üzlet előterébe turkálót alakítottam ki, ahol cipőket, táskákat, öveket, pólókat, pulcsikat, farmerokat, szabadidő ruhákat, kabátokat valamint sok más dolgot találhat az ember.</p>
+        </div>
     </section>
 
     <!-- FOOTER -->
