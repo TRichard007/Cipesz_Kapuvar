@@ -11,13 +11,36 @@
         /* HEADER */
         header {
             background: red;
-            padding: 20px;
+            padding: 20px 0;
             text-align: center;
         }
-        header .title-box {
+        .header-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+        .icon-box {
             background: white;
             color: black;
-            border: 2px solid black;
+            border: 4px solid black; /* thicker border */
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+        }
+        .icon-box img {
+            max-width: 40px;
+            max-height: 40px;
+        }
+        .title-box {
+            background: white;
+            color: black;
+            border: 4px solid black; /* thicker border */
             display: inline-block;
             padding: 15px 25px;
             border-radius: 8px;
@@ -41,15 +64,24 @@
 
         /* CONTACT ICONS */
         #contact p { margin: 8px 0; font-size: 1rem; }
+        #contact img { vertical-align: middle; margin-right: 5px; width: 20px; }
     </style>
 </head>
 
 <body>
     <!-- HEADER -->
     <header>
-        <div class="title-box">
-            <h1>Cipész és Kulcsmásoló Kapuvár</h1>
-            <p>Török Zoltán cipészmester</p>
+        <div class="header-icons">
+            <div class="icon-box">
+                <img src="shoe-hammer.png" alt="Shoe and Hammer">
+            </div>
+            <div class="title-box">
+                <h1>Cipész és Kulcsmásoló Kapuvár</h1>
+                <p>Török Zoltán cipészmester</p>
+            </div>
+            <div class="icon-box">
+                <img src="key.png" alt="Key">
+            </div>
         </div>
     </header>
 
@@ -121,7 +153,7 @@
         <p>📞 <strong>Telefonszám:</strong> <a href="tel:+36707739913">+36/70/773/9913</a></p>
         <p>✉️ <strong>E-mail:</strong> <a href="mailto:zoltant7691@gmail.com">zoltant7691@gmail.com</a></p>
         <p>📍 <strong>Cím:</strong> Kapuvár, Veszkényi utca 20</p>
-        <p>🌐 <strong>Facebook:</strong> <a href="https://www.facebook.com/torok.zoltan.969" target="_blank">Facebook – Török Zoltán</a></p>
+        <p><img src="facbookicon.png" alt="Facebook"> <strong>Facebook:</strong> <a href="https://www.facebook.com/torok.zoltan.969" target="_blank">Facebook – Török Zoltán</a></p>
     </section>
 
     <!-- MAP -->
